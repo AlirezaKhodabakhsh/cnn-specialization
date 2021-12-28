@@ -1,7 +1,13 @@
 # CNN Specialization 
 I've documented all our theoretical and practical experience in Convolutional Neural Network (CNN).
-
-
+# Parameter Weight Penalties
+- [ ] Question: Why NN with higher absulute weights have more complexitiy than NN with lower absulute weights?
+> A network with large network weights can be a sign of an unstable network where small changes in the input can lead to large changes in the output. This can be a sign that the network has overfit the training dataset and will likely perform poorly when making predictions on new data.
+Source must be read:   
+https://analyticsindiamag.com/when-to-apply-l1-or-l2-regularization-to-neural-network-weights/   
+https://towardsdatascience.com/how-to-improve-a-neural-network-with-regularization-8a18ecda9fe3
+- [ ] Question: L2 Regularization Term in Loss fucntion, what exactly doing? Is this term delete some nodes or some wiring ? and how to diminish complexity of ANN?
+- [ ] Question: has used scientists L2 Regularization to penalties weights of Kernels in CNN ? Or this term just utilizate in partisioning (MLP) ?
 # Batch Normalization
 ## Sources:
 - [ ] Paper - "How Does Batch Normalization Help Optimization?", Shibani Santurkar. ([Link](https://proceedings.neurips.cc/paper/2018/file/905056c1ac1dad141560467e0a99e1cf-Paper.pdf))
