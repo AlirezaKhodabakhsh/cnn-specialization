@@ -5,6 +5,7 @@ clc;
 %% Data %%
 x = unifrnd(1000, 3000,[1,50]);
 y = (1/10) * (x) + normrnd(0, 30,[1,50]);
+figure(1)
 plot(x,y,'r*')
 grid on;
 xlim([500,3500])
@@ -12,35 +13,45 @@ ylim([50,400])
 title('Data')
 xlabel('x')
 ylabel('y')
-%% Loss %%
-% w0=linspace(-1000,1000,50);
-% w1=w0;
-% [W0,W1] = meshgrid(w0,w1);
-% L = (W0.^2) + (x(i)^2)*(W1.^2) - (2*y(i))*W0 - (2*y(i)*x(i))*W1 + y(i)^2;
-% surf(W0,W1,L)
-%% Loss manual %%
-w0=linspace(-1,1,50);
+%% Normalize Data %%
+x_nrm = (x-mean(x))/sqrt(var(x));
+y_nrm = (y-mean(y))/sqrt(var(y));
+figure(2)
+plot(x_nrm,y_nrm,'r*')
+grid on;
+title('Normalized Data')
+xlabel('x')
+ylabel('y')
+%% Loss Main Data %%
+w0=linspace(-20,20,50);
 w1=w0;
 [W0,W1] = meshgrid(w0,w1);
-
-Loss=1/2 *((W0).^2 + (W1).^2); 
-s=.2;
-
-figure()
-surf(W0+s, W1+s,Loss);
-xlabel('w0');
-ylabel('w1');
-hold on;
-title('J(w_0,w_1) , ||W||_2^2')
-
-r=0.1;
-[X,Y,R2] = sphere;
+Loss = zeros(50,50);
+for i = 1:50
+    L = (y(i) - (W0 + W1*x(i))).^2;
+    Loss = Loss + L;
+end
+figure(3)
+surf(W0,W1,Loss)
+title('Loss function - main data')
+%% Loss Normalized Data %%
+Loss = zeros(50,50);
+for i = 1:50
+    L = (y_nrm(i) - (W0 + W1*x_nrm(i))).^2;
+    Loss = Loss + L;
+end
+figure(4)
+surf(W0,W1,Loss)
+title('Loss function - normalized data')
+figure(5)
+contour(W0,W1,Loss)
+title('Loss function - Contour')
+%% R2 (2th Norm) %%
+figure(6)
+r=50;
+[X,Y,R2] = sphere(50-1);
 surf(r*X,r*Y,r*R2)
 axis equal
-
-
-figure()
-contour(W0+s, W1+s,Loss)
-hold on;
-contour(r*X,r*Y,r*R2)
-title('J(w_0,w_1) , ||W||_2^2')
+%% 
+figure(7)
+surf(W0,W1,Loss + r*R2)
