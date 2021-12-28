@@ -45,6 +45,10 @@ Check out this document for more information and a deeper discussion.
 
 
 # Dropout 
+-[ ] Question : I comprehend that what happened in test phase of NN with dropout (save how many used a specific neuron in training phase (p) and then enforce **p** on 
+all wires of that specific node). my question is, in practical how handle this (PyTorch)?
+> Unsolved
+
 # Network in Network Layers (GoogleNet)
 # Deconvolution 
 # Up-pooling
