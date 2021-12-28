@@ -1,6 +1,16 @@
 # CNN Specialization 
 I've documented all our theoretical and practical experience in Convolutional Neural Network (CNN).
+### Content Table ###
+- [L1 & L2 Regularization](#l1---l2-regularization)
+  - [Questions](#questions)
+- [Batch Normalization](#batch-normalization)
+  - [Questions](#questions)   
+  - [Sources](#sources)
+  - [Quotation](#quotation)
+  - [Medium](#medium)
+- [Dropout](#dropout)
 # L1 & L2 Regularization
+## Questions
 - [x] Question: Why NN with higher absulute weights have more complexitiy than NN with lower absulute weights?
 > Solved! 
 > The results gathered on **Regularizaion folder in this repo**. 
@@ -13,8 +23,26 @@ I've documented all our theoretical and practical experience in Convolutional Ne
 > 
 - [ ] Question: has used scientists L2 Regularization to penalties weights of Kernels in CNN ? Or this term just utilizate in partisioning (MLP) ?
 > Unsolved!
+
+
 # Batch Normalization
-## Sources:
+## Questions
+- [ ] Question : How Batch-Normalization layer improve training?
+> Solved: as you can see in lecture note (Batch normalization), as well as see in MATLAB code in Regularization folder, normalizing data alter loss function. 
+> It can leads to a smooth updatating weights with upper speed.
+- [ ] Question : How BN layer can improve regularization (diminish loss plot)?
+> Unsolved!
+- [ ] Question : What is exactly trainble parameters in BN layer?
+> Unsolved!
+- [ ] : Question : what is exactly covariant shift phrase in BN layer?
+> Unsolved!
+- [ ] : Question : what difference between train and test phase in BN ?
+> Unsolved!
+- [ ] : Question : what is running mean and variance in PyTorch?
+> Unsolved!
+- [ ] : Question : How is BN layer in CNN ?
+> Unsolved!
+## Sources
 - [ ] Paper - "How Does Batch Normalization Help Optimization?", Shibani Santurkar. ([Link](https://proceedings.neurips.cc/paper/2018/file/905056c1ac1dad141560467e0a99e1cf-Paper.pdf))
 - [ ] Weblog - "Batch normalization in 3 levels of understanding", 
 Johann Huber. ([Link](https://towardsdatascience.com/batch-normalization-in-3-levels-of-understanding-14c2da90a338))
@@ -39,10 +67,6 @@ Check out this document for more information and a deeper discussion.
 ## Medium 
 - [ ] Article 1st:
 - > nothing has written yet.
-
-
-## My Notes
-
 
 # Dropout 
 -[ ] Question : I comprehend that what happened in test phase of NN with dropout (save how many used a specific neuron in training phase (p) and then enforce **p** on 
