@@ -69,11 +69,16 @@ Check out this document for more information and a deeper discussion.
 - > nothing has written yet.
 
 # Dropout 
+Dropout make ANN, distibuted system.
 -[ ] Question : I comprehend that what happened in test phase of NN with dropout (save how many used a specific neuron in training phase (p) and then enforce **p** on 
 all wires of that specific node). my question is, in practical how handle this (PyTorch)?
 > Unsolved
-
+- [ ] Question : Where put dropout in ANN? after activation ? before activation? 
+> Unsolved!
+- [ ] Question : How dropout implemented in PyTorch?
+> Unsolved!
 # Network in Network Layers (GoogleNet)
+Reduce number of feature map after conolotional layer without diminish size of feature map (try to get lighter and thincker)
 # Deconvolution 
 # Up-pooling
 # Transfer Learning
