@@ -9,6 +9,21 @@ I've documented all our theoretical and practical experience in Convolutional Ne
   - [Quotation](#quotation)
   - [Medium](#medium)
 - [Dropout](#dropout)
+
+# Activation Function
+## ReLU
+- suffer from dying ReLU. The dying ReLU refers to the problem when ReLU neurons become inactive and only output 0 for any input.
+## Leaky ReLU
+- one of solving problem of dying relu is leaky relu.
+## Sigmoid
+- have vanishing gradient and saturation problems.
+- range=[0-1]
+- miss sign of input
+## Tanh
+- have vanishing gradient and saturation problems.
+- rqange=[-1,1]
+- keep the sign of input
+
 # L1 & L2 Regularization
 ## Questions
 - [x] Question: Why NN with higher absulute weights have more complexitiy than NN with lower absulute weights?
