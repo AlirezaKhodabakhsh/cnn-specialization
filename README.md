@@ -41,6 +41,10 @@ I've documented all our theoretical and practical experience in Convolutional Ne
 
 
 # Batch Normalization
+## Exercises:
+- `CHECK TELEGRAM` : Make a 2D data, that every dimention have normal distribution (mean=0, std=1). please plot distribution of both dimentions.  then pass from a perceptron with 2 weights and 1 bias. please plot distribution again. what happen?
+- please pass putput this perceptron from ReLU. and plot distributions again, what happened?
+- proof your observations with stochastic processes. (sum of nomral distribution and ....)
 ## Questions
 - [ ] Question : How Batch-Normalization layer improve training?
 > Solved: as you can see in lecture note (Batch normalization), as well as see in MATLAB code in Regularization folder, normalizing data alter loss function. 
